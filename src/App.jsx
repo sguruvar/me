@@ -87,18 +87,6 @@ function App() {
       links: [{ label: 'GitHub PR', url: 'https://github.com/NVIDIA/dcgm-exporter/pull/674' }]
     },
     {
-      title: 'Multi-Agent AI Systems Observability on Kubernetes (Medium, June 2026)',
-      links: [{ label: 'Medium', url: 'https://medium.com/@sivagurunath/end-to-end-observability-for-multi-agent-ai-systems-on-kubernetes-e4133dd111d6' }]
-    },
-    {
-      title: 'GPU Cost Attribution for Disaggregated LLM Inference with NVIDIA Dynamo (Medium, June 2026)',
-      links: [{ label: 'Medium', url: 'https://medium.com/@sivagurunath/gpu-cost-attribution-for-disaggregated-llm-inference-with-nvidia-dynamo-34815fd55ea4' }]
-    },
-    {
-      title: 'Per-Namespace GPU Cost Attribution on EKS with NVIDIA MIG (Medium)',
-      links: [{ label: 'Medium', url: 'https://medium.com/@sivagurunath/per-namespace-gpu-cost-attribution-on-eks-with-nvidia-mig-9dde0f82b6e4' }]
-    },
-    {
       title: 'OSS: KEDA + Amazon Managed Prometheus (AMP) — CNCF merged (github.com/kedacore/keda/pull/5315)',
       links: [{ label: 'GitHub PR', url: 'https://github.com/kedacore/keda/pull/5315' }]
     },
@@ -123,6 +111,18 @@ function App() {
         { label: 'SIG Issue', url: 'https://github.com/open-telemetry/sig-end-user/issues/341' },
         { label: 'opentelemetry.io PR', url: 'https://github.com/open-telemetry/opentelemetry.io/pull/10310' }
       ]
+    },
+    {
+      title: 'Multi-Agent AI Systems Observability on Kubernetes (Medium, June 2026)',
+      links: [{ label: 'Medium', url: 'https://medium.com/@sivagurunath/end-to-end-observability-for-multi-agent-ai-systems-on-kubernetes-e4133dd111d6' }]
+    },
+    {
+      title: 'GPU Cost Attribution for Disaggregated LLM Inference with NVIDIA Dynamo (Medium, June 2026)',
+      links: [{ label: 'Medium', url: 'https://medium.com/@sivagurunath/gpu-cost-attribution-for-disaggregated-llm-inference-with-nvidia-dynamo-34815fd55ea4' }]
+    },
+    {
+      title: 'Per-Namespace GPU Cost Attribution on EKS with NVIDIA MIG (Medium)',
+      links: [{ label: 'Medium', url: 'https://medium.com/@sivagurunath/per-namespace-gpu-cost-attribution-on-eks-with-nvidia-mig-9dde0f82b6e4' }]
     }
   ]
 
