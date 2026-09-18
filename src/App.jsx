@@ -113,11 +113,11 @@ function App() {
       ]
     },
     {
-      title: 'Multi-Agent AI Systems Observability on Kubernetes (Medium, June 2026)',
+      title: 'Multi-Agent AI Systems Observability on Kubernetes (Medium)',
       links: [{ label: 'Medium', url: 'https://medium.com/@sivagurunath/end-to-end-observability-for-multi-agent-ai-systems-on-kubernetes-e4133dd111d6' }]
     },
     {
-      title: 'GPU Cost Attribution for Disaggregated LLM Inference with NVIDIA Dynamo (Medium, June 2026)',
+      title: 'GPU Cost Attribution for Disaggregated LLM Inference with NVIDIA Dynamo (Medium)',
       links: [{ label: 'Medium', url: 'https://medium.com/@sivagurunath/gpu-cost-attribution-for-disaggregated-llm-inference-with-nvidia-dynamo-34815fd55ea4' }]
     },
     {
