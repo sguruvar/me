@@ -72,7 +72,7 @@ function App() {
       links: [{ label: 'Amazon', url: 'https://a.co/d/00pIRd0N' }]
     },
     {
-      title: 'Book (upcoming): Generative AI Observability — Architecting Intelligent Monitoring Ecosystems',
+      title: 'Book: Generative AI Observability — Architecting Intelligent Monitoring Ecosystems',
       links: [{ label: 'Amazon', url: 'https://a.co/d/01xsLYR8' }]
     },
     {
