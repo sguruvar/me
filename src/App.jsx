@@ -31,60 +31,107 @@ function App() {
   const [activeSection, setActiveSection] = useState('home')
 
   const skills = [
+    { name: 'Distributed Systems', level: 95, icon: Server },
+    { name: 'Kubernetes / EKS', level: 92, icon: Server },
+    { name: 'Observability & OpenTelemetry', level: 92, icon: Code },
+    { name: 'AI/ML Infrastructure', level: 88, icon: Database },
     { name: 'AWS Cloud', level: 95, icon: Cloud },
-    { name: 'Kubernetes', level: 90, icon: Server },
-    { name: 'Microservices', level: 92, icon: Code },
-    { name: 'Big Data', level: 88, icon: Database },
-    { name: 'DevOps', level: 85, icon: Server },
-    { name: 'Java/Spring', level: 90, icon: Code }
+    { name: 'Python / Java / Go', level: 88, icon: Code }
   ]
 
   const experiences = [
     {
-      company: 'Amazon',
-      role: 'Senior Specialist Architect',
-      period: 'October 2021 – Present',
-      description: 'Designed and implemented hybrid cloud architectures for Fortune 500 clients, integrating AWS and on-prem infrastructure, leading to a 30% reduction in infrastructure costs and 20% improvement in performance. Guided engineering teams in Kubernetes and observability best practices, helping them adopt OpenTelemetry and Prometheus-based monitoring, reducing operational toil by 40%. Led cloud-native transformation projects, modernizing legacy applications with EKS, Terraform, and serverless architectures, improving agility and reducing time-to-market by 35%. Mentored and trained 10+ solutions architects, fostering expertise in Kubernetes, hybrid cloud, and observability.'
+      company: 'Amazon Web Services',
+      role: 'Senior Specialist Solutions Architect — Containers & Observability',
+      period: '2021 – Present',
+      description: 'Partnered with large enterprise customers to design and optimize Kubernetes, observability, and distributed platform architectures. Built end-to-end observability platform for multi-agent AI systems (LangGraph, CrewAI, AWS Strands) on Kubernetes — unified OTel traces, per-framework cost attribution via Bedrock token interception, Grafana Tempo tracing, and AMP metrics. Built GPU observability and chargeback platform using NVIDIA DCGM, AMP, Grafana, and OpenTelemetry. Contributed KEDA integration with Amazon Managed Prometheus (AMP) to the CNCF KEDA project. Developed EKS Event Watcher for Kubernetes control-plane event persistence. Contributed AI inference observability blueprint to the OpenTelemetry sig-end-user project.'
     },
     {
-      company: 'Apple',
-      role: 'Enterprise Architect',
-      period: 'April 2015 – September 2021',
-      description: 'Architected secure and scalable cloud services, integrating Apple’s private cloud with AWS, ensuring compliance with Apple’s strict security and privacy policies. Led the hybrid cloud migration for Apple’s iTunes Music Reconciliation application, improving efficiency by 30% and reducing costs by 20% through resource optimization. Standardized cloud infrastructure practices across teams by defining best practices for Kubernetes, Terraform, and multi-region deployments. Designed containerized environments for Apple’s internal engineering services, improving deployment speed and consistency while enhancing security.'
+      company: 'Apple (via Cognizant)',
+      role: 'Enterprise Architect / Lead Engineer',
+      period: '2015 – 2021',
+      description: 'Modernized large-scale enterprise platforms supporting distributed workloads across cloud and hybrid environments. Led platform modernization for Apple RightNotes royalty platform — improving operational efficiency and reducing annual infrastructure cost by ~$4M. Drove platform reliability for jobs.apple.com and RightNotes including incident postmortems, deployment automation, and replication lag monitoring across multi-region stateful workloads. Contributed to enterprise platform initiatives involving iCloud-related distributed infrastructure, Cassandra, and cloud operations at scale. Led Kubernetes, Terraform, and CI/CD adoption across engineering teams.'
     },
     {
       company: 'Oracle',
       role: 'Senior Member of Technical Staff',
-      period: 'April 2011 – March 2015',
-      description: 'Developed and deployed Oracle’s Cloud Management Portal, streamlining cloud operations and reducing response time by 25%. Created enterprise Java applications that improved system reliability by 20%. Led the development of the Oracle Enterprise Manager PeopleSoft plugin, enhancing monitoring and increasing performance by 30%.'
+      period: '2011 – 2015',
+      description: 'Designed and developed distributed enterprise systems supporting high-scale transactional workloads. Built monitoring, automation, and operational tooling improving performance visibility and system reliability. Developed scalable backend services and platform components using Java and distributed systems patterns. Contributed to Oracle Enterprise Manager platform including monitoring plugins and diagnostic tooling.'
     },
     {
-      company: 'E*Trade',
-      role: 'Senior Engineer',
-      period: 'August 2007 – March 2011',
-      description: 'Enhanced E*TRADE’s online trading platform, improving performance by 15% and user engagement by 10%. Automated account management processes, reducing account opening time by 20% while improving security compliance by 25%.'
-    },
-    {
-      company: 'Spike Source',
-      role: 'SDE',
-      period: 'June 2006 – July 2007',
-      description: 'Led the development of Spike Asset Manager (SAM), reducing compliance risks by 15%. Designed and optimized the Core Stack, integrating 113 open-source components.'
-    },
-    {
-      company: 'Indian Institute of Science (IISc)',
-      role: 'Research Scientist',
-      period: 'February 2005 – May 2006',
-      description: 'Developed an Example-Based Machine Translation (EBMT) system for multilingual querying, achieving a BLEU score of 0.5949. Published research in NLP and information processing in leading technology journals.'
+      company: 'E*TRADE (via Cognizant)',
+      role: 'Senior Software Engineer',
+      period: '2006 – 2011',
+      description: 'Developed backend services and distributed systems supporting high-volume financial transaction workloads. Built scalable Java-based services improving transaction throughput and platform resiliency. Implemented automation and deployment tooling reducing operational overhead and improving release velocity.'
     }
   ]
 
   const publications = [
-    'Book: Mastering AWS EKS (BPB publications)',
-    'Managing Kubernetes Control Plane Events in Amazon EKS',
-    'Autoscaling Kubernetes workloads with AWS Prometheus (CNCF contribution)',
-    'Navigating the Cloudy Big-data highway in the age of Containers',
-    'Multilingual Querying and Information Processing',
-    'Synthetic transaction monitoring in the age of Microservices'
+    {
+      title: 'Book: Mastering AWS EKS (BPB Publications)',
+      links: [{ label: 'Amazon', url: 'https://a.co/d/00pIRd0N' }]
+    },
+    {
+      title: 'Book (upcoming): Generative AI Observability — Architecting Intelligent Monitoring Ecosystems',
+      links: [{ label: 'Amazon', url: 'https://a.co/d/01xsLYR8' }]
+    },
+    {
+      title: 'GPU Cost Attribution in Amazon EKS using Amazon Managed Service for Prometheus, Amazon Managed Grafana and OpenTelemetry',
+      links: [
+        { label: 'AWS Blog', url: 'https://aws.amazon.com/blogs/mt/gpu-cost-attribution-in-amazon-eks-using-amazon-managed-service-for-prometheus-amazon-managed-grafana-and-opentelemetry/' },
+        { label: 'AWS Skill Builder', url: 'https://skillbuilder.aws/learn/JZVWZA95SC/gpu-cost-attribution-in-amazon-eks-using-amazon-managed-service-for-prometheus-amazon-managed-grafana-and-opentelemetry/HUPFSYZUKM' }
+      ]
+    },
+    {
+      title: 'OSS: NVIDIA DCGM Exporter — GPU observability contribution (NVIDIA/dcgm-exporter#674)',
+      links: [{ label: 'GitHub PR', url: 'https://github.com/NVIDIA/dcgm-exporter/pull/674' }]
+    },
+    {
+      title: 'Multi-Agent AI Systems Observability on Kubernetes (Medium, June 2026)',
+      links: [{ label: 'Medium', url: 'https://medium.com/@sivagurunath/end-to-end-observability-for-multi-agent-ai-systems-on-kubernetes-e4133dd111d6' }]
+    },
+    {
+      title: 'GPU Cost Attribution for Disaggregated LLM Inference with NVIDIA Dynamo (Medium, June 2026)',
+      links: [{ label: 'Medium', url: 'https://medium.com/@sivagurunath/gpu-cost-attribution-for-disaggregated-llm-inference-with-nvidia-dynamo-34815fd55ea4' }]
+    },
+    {
+      title: 'Per-Namespace GPU Cost Attribution on EKS with NVIDIA MIG (Medium)',
+      links: [{ label: 'Medium', url: 'https://medium.com/@sivagurunath/per-namespace-gpu-cost-attribution-on-eks-with-nvidia-mig-9dde0f82b6e4' }]
+    },
+    {
+      title: 'OSS: KEDA + Amazon Managed Prometheus (AMP) — CNCF merged (github.com/kedacore/keda/pull/5315)',
+      links: [{ label: 'GitHub PR', url: 'https://github.com/kedacore/keda/pull/5315' }]
+    },
+    {
+      title: 'Autoscaling Kubernetes Workloads with KEDA using Amazon Managed Service for Prometheus Metrics',
+      links: [{ label: 'AWS Blog', url: 'https://aws.amazon.com/blogs/mt/autoscaling-kubernetes-workloads-with-keda-using-amazon-managed-service-for-prometheus-metrics/' }]
+    },
+    {
+      title: 'OSS: EKS Event Watcher — Kubernetes control-plane event persistence (github.com/aws-samples/eks-event-watcher)',
+      links: [
+        { label: 'GitHub', url: 'https://github.com/aws-samples/eks-event-watcher' },
+        { label: 'AWS Blog', url: 'https://aws.amazon.com/blogs/containers/managing-kubernetes-control-plane-events-in-amazon-eks/' }
+      ]
+    },
+    {
+      title: 'OSS: AI Inference Observability on EKS — full reference stack (github.com/sguruvar/ai-inference-observability-eks)',
+      links: [{ label: 'GitHub', url: 'https://github.com/sguruvar/ai-inference-observability-eks' }]
+    },
+    {
+      title: 'OTel Blueprint: AI Inference Platform Observability on Kubernetes (open-telemetry/sig-end-user#341)',
+      links: [
+        { label: 'SIG Issue', url: 'https://github.com/open-telemetry/sig-end-user/issues/341' },
+        { label: 'opentelemetry.io PR', url: 'https://github.com/open-telemetry/opentelemetry.io/pull/10310' }
+      ]
+    },
+    {
+      title: 'Navigating the Cloudy Big-data Highway in the Age of Containers',
+      links: []
+    },
+    {
+      title: 'Synthetic Transaction Monitoring in the Age of Microservices',
+      links: []
+    }
   ]
 
   const certifications = [
@@ -223,7 +270,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Senior Specialist | Cloud Architect | Innovation Champion
+            Principal Platform Engineer | Distributed Systems · Kubernetes · AI Infrastructure · OpenTelemetry
           </motion.p>
           
           <motion.p 
@@ -232,7 +279,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Results driven Senior Specialist Architect with years of experience in designing, implementing hybrid cloud (AWS and on-prem) architectures at scale. Expertise in cloud computing, Kubernetes, Observability and application modernization, with a strong programming background. Proven track record of guiding engineering teams, optimizing infrastructure for cost, security and agility and delivering scalable solutions at Apple and Amazon-scale. Passionate about privacy-first architectures, hybrid cloud adoption, and mentoring teams to adopt cloud native best practices.
+            Principal-level engineer with 20+ years building large-scale distributed systems, cloud platforms, and AI infrastructure across AWS, Apple, and Oracle. Deep expertise in Kubernetes, OpenTelemetry, GPU observability, and multi-agent AI systems. CNCF contributor, OpenTelemetry blueprint author, and author of Mastering EKS. Experienced across software engineering, platform engineering, cloud architecture, and AI infrastructure.
           </motion.p>
           
           <motion.div 
@@ -298,18 +345,19 @@ function App() {
               className="space-y-6"
             >
               <p className="text-lg leading-relaxed">
-                Results driven Senior Specialist Architect with years of experience in designing, implementing
-                hybrid cloud (AWS and on-prem) architectures at scale. Expertise in cloud computing,
-                Kubernetes, Observability and application modernization, with a strong programming
-                background. Proven track record of guiding engineering teams, optimizing infrastructure for
-                cost, security and agility and delivering scalable solutions at Apple and Amazon-scale.
-                Passionate about privacy-first architectures, hybrid cloud adoption, and mentoring teams to
-                adopt cloud native best practices.
+                Principal-level engineer with 20+ years building large-scale distributed systems, cloud
+                platforms, observability architectures, and Kubernetes-based infrastructure across AWS,
+                Apple, Oracle, and enterprise environments. Experienced across software engineering,
+                platform engineering, cloud architecture, and AI infrastructure — with a strong hands-on
+                background in distributed systems, reliability, observability, and scalable infrastructure
+                design. Recognized for solving complex infrastructure problems, simplifying operational
+                systems, and driving scalable platform initiatives across cloud-native and multi-region
+                environments.
               </p>
               
               <div className="grid grid-cols-2 gap-4 pt-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">15+</div>
+                  <div className="text-3xl font-bold text-primary">20+</div>
                   <div className="text-muted-foreground">Years Experience</div>
                 </div>
                 <div className="text-center">
@@ -456,11 +504,25 @@ function App() {
                   <div className="flex items-start">
                     <BookOpen className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-medium mb-2">{pub}</h3>
-                      <Button variant="ghost" size="sm" className="p-0 h-auto">
-                        <ExternalLink className="h-4 w-4 mr-1" />
-                        Read More
-                      </Button>
+                      <h3 className="font-medium mb-2">{pub.title}</h3>
+                      {pub.links.length > 0 && (
+                        <div className="flex flex-wrap gap-x-4 gap-y-1">
+                          {pub.links.map((link) => (
+                            <Button
+                              key={link.url}
+                              asChild
+                              variant="ghost"
+                              size="sm"
+                              className="p-0 h-auto"
+                            >
+                              <a href={link.url} target="_blank" rel="noopener noreferrer">
+                                <ExternalLink className="h-4 w-4 mr-1" />
+                                {pub.links.length > 1 ? link.label : 'Read More'}
+                              </a>
+                            </Button>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </Card>
@@ -576,7 +638,7 @@ function App() {
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p>&copy; 2024 Siva Guruvareddiar. All rights reserved.</p>
+          <p>&copy; 2026 Siva Guruvareddiar. All rights reserved.</p>
           <p className="mt-2 text-sm opacity-80">
             Built with React, Tailwind CSS, and Framer Motion
           </p>
