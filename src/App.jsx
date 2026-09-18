@@ -123,14 +123,6 @@ function App() {
         { label: 'SIG Issue', url: 'https://github.com/open-telemetry/sig-end-user/issues/341' },
         { label: 'opentelemetry.io PR', url: 'https://github.com/open-telemetry/opentelemetry.io/pull/10310' }
       ]
-    },
-    {
-      title: 'Navigating the Cloudy Big-data Highway in the Age of Containers',
-      links: []
-    },
-    {
-      title: 'Synthetic Transaction Monitoring in the Age of Microservices',
-      links: []
     }
   ]
 
